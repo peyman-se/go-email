@@ -334,18 +334,6 @@ func GetEnvWithKey(key string) string {
 	return os.Getenv(key)
 }
 
-func loadEnv() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-		os.Exit(1)
-	}
-}
-
-func init() {
-	loadEnv()
-}
-
 func send(message *Message) error {
 	// Create a new session in the us-west-2 region.
     // Replace us-west-2 with the AWS Region you're using for Amazon SES.
