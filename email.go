@@ -195,8 +195,6 @@ type Message struct {
 	Attachments []string
 }
 
-
-
 type Paragraph struct {
 	Text string
 }
